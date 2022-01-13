@@ -1,0 +1,44 @@
+Proje yazmaya başladığımızda bir defaya mahsus yapılıyor aşağıdaki işlemler.
+
+1- MYSQL Eclipse bağlantısını kur
+https://mvnrepository.com/ sitesine git
+arama bolumune mysql yaz ve son veriyonu kodunu kopyala
+
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.27</version>
+</dependency>
+
+daha sonra pom.xml sayfasında <dependencies> altına yapıştır.
+
+2- Hibernate içinde
+https://mvnrepository.com/ sitesine git
+arama bolumune Hibernate yaz ve son versiyonu(Final) kodunu kopyala
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.6.3.Final</version>
+</dependency>
+
+En son Sağ tuş Maven > Update project yapmalıyız.
+
+3- Eclipse sol taraftaki projeklasörü üzerine sağ tuşa tıkla
+New > Other > Hibernate > Hibarnate Configuration File (cfg.xml) seç
+
+İleri ileri seçin
+Database dialect : MySQL5
+Driver Class 	 : com.mysql.cj.jdbc.Driver
+Connection URL 	 : jdbc:mysql://localhost:3306/sys?serverTimezone=UTC
+Username 	 : root
+Password	 : 1234
+
+yukarıda bilgileri kendi projemize gore doldurulur.
+Daha sonra cfg.xml dosyasında </session-factory> üstüne
+
+<property name="hbm2ddl.auto">update</property>
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
