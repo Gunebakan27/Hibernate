@@ -30,7 +30,7 @@ Transaction tx=session.beginTransaction();
 //		
 //session.delete(session.get(H1_Ogrenci.class, no));
 
-		session.get(H1_Ogrenci.class, 102).setAd("Ali");
+		session.get(H1_Ogrenci.class, 102).setAd("Ali"); // Id olanlar yani primary key olanlar degisitirilemiyor
 		
 		
 
