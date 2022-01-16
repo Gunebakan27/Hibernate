@@ -28,14 +28,16 @@ public class H4_Fetch {
 		System.out.println("2. soru "+session.get(H2_Gunluk.class, 12));
 		
 		// 2-a) gunluk class ındaki tum verileri getir.
+		//SQL sorgusu
 		List<Object[]>liste= session.createQuery("FROM H1_Kisi k JOIN H2_Gunluk g ON k.kisiId=g.kisi").getResultList();
-				//liste.forEach((x)->System.out.println(Arrays.toString(x)));
-		liste.stream().forEach((t)->System.out.println(Arrays.deepToString((Object[]) t)));	//2. YONTEM
+				liste.forEach((x)->System.out.println(Arrays.toString(x)));
+//		liste.stream().forEach((t)->System.out.println(Arrays.toString(t)));	//2. YONTEM
 		System.out.println("************** SORU 2 SONU **********************************");
 		
 		//3) Kisiler ve Gunlukler tablolarindaki ortak olan (one to one ile birebir bağladığımız) kayıtların,
 		// Kisi adi, gunluk yazisi(yazilar) ve kisi yası (kisiYas) bilgilerini sorgulayiniz.
-		
+	
+		//HQL sorgusu
 		  String sorgu = "Select k.kisi_ad, g.owner, k.kisiYas"
                   + " from kisiler k inner join gunlukler g"
                   +" on k.kisi_id=g.baglanti";
