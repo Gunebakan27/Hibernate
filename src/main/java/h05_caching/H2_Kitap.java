@@ -11,7 +11,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Table(name="kitaplar")
+@Table(name="kitaplar2")
 @Cacheable
 @Cache(region="H2_Kitap", usage=CacheConcurrencyStrategy.READ_WRITE)
 public class H2_Kitap {

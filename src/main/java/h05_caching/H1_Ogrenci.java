@@ -19,7 +19,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 
 @Entity
-@Table(name="ogrenciler1")
+@Table(name="ogrenciler2")
 @Cacheable
 @Cache(region="H1_Ogrenci", usage=CacheConcurrencyStrategy.READ_WRITE)
  public class H1_Ogrenci {
@@ -85,11 +85,15 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 		this.kitapListesi = kitapListesi;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Ogrenci ogrId=" + ogrId + ", ogrAd=" + ogrAd + ", ogrNot=" + ogrNot + ", kitapListesi="
-				+ kitapListesi + "]";
+		return "Ogrenci ogrId=" + ogrId + ", ogrAd=" + ogrAd + ", ogrNot=" + ogrNot 
+			 + "]";
 	}
+//	@Override
+//	public String toString() {
+//		return "Ogrenci ogrId=" + ogrId + ", ogrAd=" + ogrAd + ", ogrNot=" + ogrNot + ", kitapListesi="
+//				+ kitapListesi + "]";
+//	}
 	
 }

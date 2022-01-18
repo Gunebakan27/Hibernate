@@ -30,8 +30,12 @@ public class H3_Save {
 	
 	
 	H1_Ogrenci o1=new H1_Ogrenci(111,"mustafa senel", 99);
+	o1.getKitapListesi().add(k1);
+	o1.getKitapListesi().add(k2);
 	
 	H1_Ogrenci o2=new H1_Ogrenci(222,"gökhan ozturk", 88);
+	o2.getKitapListesi().add(k3);
+	o2.getKitapListesi().add(k4);
 	
 	H1_Ogrenci o3=new H1_Ogrenci(333,"yasir polat", 77);
 	
