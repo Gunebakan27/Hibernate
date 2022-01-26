@@ -5,8 +5,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import h02_embeddable.H1_Ogrenci;
-
 public class H3_Save {
 
 	public static void main(String[] args) {
